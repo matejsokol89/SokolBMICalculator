@@ -13,17 +13,17 @@
         android:layout_marginTop="@dimen/BMI_MARGIN_TOP">
 
     <ImageView
-            tools:srcCompat="@drawable/bmimain"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:srcCompat="@drawable/bmi_class"
             android:layout_alignParentStart="true"
             android:layout_marginStart="@dimen/BMI_MARGIN_START"
             android:layout_alignParentTop="true"
             android:id="@+id/imageView"
-            android:layout_marginTop="@dimen/BMI_MARGIN_TOP"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="2dp"
             android:layout_toStartOf="@+id/bmiValue"
             android:layout_marginEnd="@dimen/BMI_MARGIN_END"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/bmimain"
+            app:srcCompat="@drawable/bmi_class"
             android:contentDescription="@string/BMI_INFO_PIC"/>
     <TextView
             android:layout_width="wrap_content"

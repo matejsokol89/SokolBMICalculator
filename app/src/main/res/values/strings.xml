@@ -2,8 +2,8 @@
     <string name="app_name">BMI</string>
     <string name="BMI_MASS_ERROR">Give correct mass!</string>
     <string name="BMI_HEIGHT_ERROR">Give correct height!</string>
-    <string name="BMI_MASS_KG">mass [kg]</string>
-    <string name="BMI_HEIGHT_CM">height [cm]</string>
+    <string name="BMI_MASS_KG">Mass [kg]</string>
+    <string name="BMI_HEIGHT_CM">Height [cm]</string>
     <string name="BMI_MASS_LB">mass [lb]</string>
     <string name="BMI_HEIGHT_IN">height [in]</string>
     <string name="BMI_SWITCH_COM">Units switched</string>
@@ -14,8 +14,8 @@
     <string name="BMI_OBESE2">Obese class II</string>
     <string name="BMI_OBESE3">Obese class III</string>
     <string name="BMI_ERROR">ERROR</string>
-    <string name="BMI_COUNT_BUTTON_SIGN">Count</string>
-    <string name="BMI_RESULT">result</string>
+    <string name="BMI_COUNT_BUTTON_SIGN">Calculate</string>
+    <string name="BMI_RESULT">RESULT</string>
     <string name="BMI_VISIBILITY">BMI_VISIBILITY</string>
     <string name="BMI_BLANK"></string>
     <string name="BMI_UNDERWEIGHT_INFO">Underweight, you need to eat more.</string>

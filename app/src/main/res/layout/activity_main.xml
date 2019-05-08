@@ -7,6 +7,8 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <EditText
+            android:textStyle="bold"
+            android:textColor="@color/colorBlue"
             android:layout_width="@dimen/BMI_WIDTH_MATCH"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -38,6 +40,8 @@
             app:layout_constraintTop_toBottomOf="@+id/massEdit"
             android:textAlignment="textStart" android:textSize="18sp"/>
     <TextView
+            android:textStyle="bold"
+            android:textColor="@color/colorBlue"
             android:text="@string/BMI_RESULT"
             android:layout_width="@dimen/BMI_WIDTH_MATCH"
             android:layout_height="wrap_content"
@@ -51,13 +55,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:textAlignment="center"/>
     <ImageView
-            tools:srcCompat="@drawable/run"
+            tools:srcCompat="@drawable/bmimg"
             android:id="@+id/imageView4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
-            app:srcCompat="@drawable/run"
+            app:srcCompat="@drawable/bmimg"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintVertical_bias="0.0"
             android:layout_width="0dp"
@@ -83,6 +87,8 @@
             app:layout_constraintTop_toTopOf="@+id/guideline"
             android:textAlignment="textStart" android:textSize="18sp"/>
     <EditText
+            android:textStyle="bold"
+            android:textColor="@color/colorBlue"
             android:layout_width="@dimen/BMI_WIDTH_MATCH"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -138,7 +144,7 @@
             android:layout_marginEnd="@dimen/BMI_MARGIN_END"
             app:layout_constraintEnd_toEndOf="parent"/>
     <ImageButton
-            app:srcCompat="@drawable/arrow"
+            app:srcCompat="@drawable/ic_medical_result"
             android:id="@+id/showInfo"
             android:layout_width="@dimen/BMI_WIDTH_MATCH"
             android:layout_marginTop="@dimen/BMI_MARGIN_TOP"
@@ -147,16 +153,17 @@
             app:layout_constraintBottom_toTopOf="@+id/bmiDescriptionView"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="@dimen/BMI_MARGIN_END"
-            tools:srcCompat="@drawable/arrow"
+            tools:srcCompat="@drawable/ic_medical_result"
             app:layout_constraintVertical_bias="0.0"
             android:visibility="invisible"
             android:contentDescription="@string/BMI_INFO_BUTTON_DESC"
             android:layout_height="@dimen/BMI_HEIGHT_MATCH" android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="@+id/guideline5" app:layout_constraintHorizontal_bias="0.0"
             android:backgroundTint="@android:color/transparent" android:background="@android:color/transparent"/>
+
     <android.support.constraint.Guideline
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/guideline5"
-            app:layout_constraintGuide_percent="0.80"/>
+            app:layout_constraintGuide_begin="329dp"/>
 </android.support.constraint.ConstraintLayout>
