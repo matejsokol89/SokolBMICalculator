@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="BMI_MARGIN_END">8dp</dimen>
+    <dimen name="BMI_MARGIN_BOTTOM">8dp</dimen>
+    <dimen name="BMI_MARGIN_START">8dp</dimen>
+    <dimen name="BMI_MARGIN_TOP">8dp</dimen>
+    <dimen name="BMI_WIDTH_MATCH">0dp</dimen>
+    <dimen name="BMI_HEIGHT_MATCH">0dp</dimen>
+    <dimen name="BMI_SPACE_HEIGHT">10dp</dimen>
+    <dimen name="BMI_MARGIN_INFO_TOP">50dp</dimen>
+    <dimen name="BMI_HISTORY_IMAGE_RES">50dp</dimen>
+    <dimen name="BMI_HISTORY_BORDERS">8dp</dimen>
+    <dimen name="BMI_DIVIDER_HEIGHT">1dp</dimen>
+    <dimen name="BMI_DIVIDER_MARGIN">4dp</dimen>
+</resources>
