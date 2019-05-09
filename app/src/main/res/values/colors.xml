@@ -5,12 +5,13 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorLapisLazuli">#26619c</color>
     <color name="colorVerdigris">#00a693</color>
-    <color name="colorOrange">#fde458</color>
+    <color name="colorOrange">#f47142</color>
     <color name="colorPink">#e31c66</color>
     <color name="colorPompeianPink">#B80000</color>
     <color name="colorClaret">#541f1f</color>
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlue">#257CA3</color>
+    <color name="colorOrange1">#257CA3</color>
 
 </resources>

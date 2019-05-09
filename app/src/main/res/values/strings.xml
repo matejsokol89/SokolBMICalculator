@@ -18,14 +18,15 @@
     <string name="BMI_RESULT">RESULT</string>
     <string name="BMI_VISIBILITY">BMI_VISIBILITY</string>
     <string name="BMI_BLANK"></string>
-    <string name="BMI_UNDERWEIGHT_INFO">Underweight, you need to eat more.</string>
-    <string name="BMI_NORMAL_INFO">Normal weight, you have nothing to do.</string>
-    <string name="BMI_OVERWEIGHT_INFO">Overweight, you need to start thinking about your weight.</string>
-    <string name="BMI_OBESE1_INFO">Obese class I, you should go on a diet.</string>
-    <string name="BMI_OBESE2_INFO">Obese class II, your health may not be as good as you want.</string>
-    <string name="BMI_OBESE3_INFO">Obese class III, if you want to be healthy, you have to do something.</string>
-    <string name="BMI_ABOUT_DOWN">Kebab is love kebab is life</string>
-    <string name="BMI_ABOUT_TOP">(ง ͠° ͟ل͜ ͡°)ง (╯ ͠° ͟ʖ ͡°)╯</string>
+    <string name="BMI_UNDERWEIGHT_INFO">Underweight, you need to eat some stronger food like Burgers!</string>
+    <string name="BMI_NORMAL_INFO">Normal weight, you have nothing to do. You are lucky!!</string>
+    <string name="BMI_OVERWEIGHT_INFO">Overweight, you need to start taking care of your weight. Eat lesser and exercise
+        more
+    </string>
+    <string name="BMI_OBESE1_INFO">Obese class I, you should go on a diet. Throw JUNK food !</string>
+    <string name="BMI_OBESE2_INFO">Obese class II, your health may not be as good as you want. Possible Heart stroke !
+    </string>
+    <string name="BMI_OBESE3_INFO">Obese class III, you have to do something seek professional help.</string>
     <string name="BMI_MAIN_PIC_DESC">Main picture</string>
     <string name="BMI_INFO_BUTTON_DESC">Info button</string>
     <string name="BMI_INFO_PIC">Bmi info pic</string>
@@ -33,22 +34,9 @@
     <string name="BI_ABOUT_TOP_IMAGE">About me top image</string>
     <string name="BMI_RESULT_TEXT">result</string>
     <string name="BMI_BUTTON_COUNT">Count</string>
-    <string name="BMI_SHOW_INFO_DESC">Bmi show info</string>
-    <string name="BMI_SAMPLE_DATE">12.12.2019</string>
-    <string name="BMI__HISTORY_CATEGORY">Obese class III</string>
-    <string name="BMI_HISTORY_IMAGE_DESC">Image in BMI history</string>
-    <string name="BMI_HISTORY_SAMPLE_VALUE">9999999.00</string>
-    <string name="BMI_HISTORY_SAMPLE_HEIGHT">height: 999 cm</string>
-    <string name="BMI_HISTORY_SAMPLE_MASS">mass: 999 kg</string>
-    <string name="BMI_MENU_HISTORY">History</string>
-    <string name="BMI_MENU_ABOUT_ME">About me</string>
-    <string name="BMI_MENU_SWITCH">Switch units</string>
     <string name="BMI_DATE_FORMAT">dd.MM.yyyy</string>
     <string name="BMI_MASS_STRING_START">mass:</string>
     <string name="BMI_HEIGHT_STRING_START">height:</string>
     <string name="BMI_MASS_STRING_END_KG">kg</string>
-    <string name="BMI_MASS_STRING_END_LB">lb</string>
     <string name="BMI_HEIGHT_STRING_END_CM">cm</string>
-    <string name="BMI_HEIGHT_STRING_END_IN">in</string>
-    <string name="BMI_HISTORY_EMPTY">History is empty!</string>
 </resources>

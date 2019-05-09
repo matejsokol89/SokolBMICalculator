@@ -2,16 +2,13 @@ package com.example.sokolbmicalculator
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.example.sokolbmicalculator.logic.Bmi
 import com.example.sokolbmicalculator.logic.BmiForKgCm
 import kotlinx.android.synthetic.main.activity_main.*
-import java.text.SimpleDateFormat
-import java.util.*
 
 @SuppressLint("Registered")
 class MainActivity : AppCompatActivity() {
@@ -25,13 +22,21 @@ class MainActivity : AppCompatActivity() {
 
         countBmi.setOnClickListener {
             countBmiButton()
+            val dataIntent = Intent(this, InfoBmiActivity::class.java)
+            dataIntent.putExtra(KEY_BMI_VALUE, bmiNumberView.text.toString())
+            dataIntent.putExtra(KEY_BMI_NAME, bmiDescriptionView.text.toString())
+            dataIntent.putExtra(KEY_BMI_COLOR, bmiNumberView.currentTextColor)
+            dataIntent.putExtra(
+                KEY_BMI_DESCRIPTION,
+                bmiClassification(bmiNumberView.text.toString().toDouble()).getDescription(this.resources)
+            )
+            startActivity(dataIntent)
         }
 
         showInfo.setOnClickListener {
             showInfoButton()
         }
     }
-    
 
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
@@ -81,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                     this.bmiNumberView.setTextColor(category.getColor(this.resources))
                     this.bmiDescriptionView.text = category.getName(this.resources)
                     this.showInfo.visibility = View.VISIBLE
-                    updateHistory(bmiValue, category.getName(this.resources), category.getColor(this.resources))
+//                    updateHistory(bmiValue, category.getName(this.resources), category.getColor(this.resources))
                     invalidateOptionsMenu()
                 }
             }
@@ -90,32 +95,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateHistory(bmiValue: String, category: String, color: Int) {
-        val date = Calendar.getInstance().time
-        val dateText = SimpleDateFormat(getString(R.string.BMI_DATE_FORMAT), Locale.getDefault()).format(date)
-        val massString = getString(R.string.BMI_MASS_STRING_START) + massEdit.text + if (!units) {
-            getString(R.string.BMI_MASS_STRING_END_KG)
-        } else {
-            getString(R.string.BMI_MASS_STRING_END_LB)
-        }
-        val heightString = getString(R.string.BMI_HEIGHT_STRING_START) + heightEdit.text + if (!units) {
-            getString(R.string.BMI_HEIGHT_STRING_END_CM)
-        } else {
-            getString(R.string.BMI_HEIGHT_STRING_END_IN)
-        }
-        val bmiRecord =
-            BmiRecord(massString, heightString, bmiValue, category, color, dateText)
-
-        val records = prefs.getRecordList(KEY_BMI_RESULTS)
-        if (records.size < 10) {
-            records.add(bmiRecord)
-            prefs.save(KEY_BMI_RESULTS, records)
-        } else {
-            records.removeAt(0)
-            records.add(bmiRecord)
-            prefs.save(KEY_BMI_RESULTS, records)
-        }
-    }
+//    private fun updateHistory(bmiValue: String, category: String, color: Int) {
+//        val date = Calendar.getInstance().time
+//        val dateText = SimpleDateFormat(getString(R.string.BMI_DATE_FORMAT), Locale.getDefault()).format(date)
+//        val massString = getString(R.string.BMI_MASS_STRING_START) + massEdit.text + if (!units) {
+//            getString(R.string.BMI_MASS_STRING_END_KG)
+//        } else {
+//            getString(R.string.BMI_MASS_STRING_END_LB)
+//        }
+//        val heightString = getString(R.string.BMI_HEIGHT_STRING_START) + heightEdit.text + if (!units) {
+//            getString(R.string.BMI_HEIGHT_STRING_END_CM)
+//        } else {
+//            getString(R.string.BMI_HEIGHT_STRING_END_IN)
+//        }
+//        val bmiRecord =
+//            BmiRecord(massString, heightString, bmiValue, category, color, dateText)
+//
+//        val records = prefs.getRecordList(KEY_BMI_RESULTS)
+//        if (records.size < 10) {
+//            records.add(bmiRecord)
+//            prefs.save(KEY_BMI_RESULTS, records)
+//        } else {
+//            records.removeAt(0)
+//            records.add(bmiRecord)
+//            prefs.save(KEY_BMI_RESULTS, records)
+//        }
+//    }
 
     private fun showMassError() {
         massEdit.error = getString(R.string.BMI_MASS_ERROR)
