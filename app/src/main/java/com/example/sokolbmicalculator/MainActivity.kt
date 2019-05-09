@@ -13,12 +13,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 @SuppressLint("Registered")
 class MainActivity : AppCompatActivity() {
     private var units = false
-    private lateinit var prefs: SharedPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        prefs = SharedPreference(this)
 
         countBmi.setOnClickListener {
             countBmiButton()
@@ -86,7 +84,6 @@ class MainActivity : AppCompatActivity() {
                     this.bmiNumberView.setTextColor(category.getColor(this.resources))
                     this.bmiDescriptionView.text = category.getName(this.resources)
                     this.showInfo.visibility = View.VISIBLE
-//                    updateHistory(bmiValue, category.getName(this.resources), category.getColor(this.resources))
                     invalidateOptionsMenu()
                 }
             }
@@ -95,35 +92,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    private fun updateHistory(bmiValue: String, category: String, color: Int) {
-//        val date = Calendar.getInstance().time
-//        val dateText = SimpleDateFormat(getString(R.string.BMI_DATE_FORMAT), Locale.getDefault()).format(date)
-//        val massString = getString(R.string.BMI_MASS_STRING_START) + massEdit.text + if (!units) {
-//            getString(R.string.BMI_MASS_STRING_END_KG)
-//        } else {
-//            getString(R.string.BMI_MASS_STRING_END_LB)
-//        }
-//        val heightString = getString(R.string.BMI_HEIGHT_STRING_START) + heightEdit.text + if (!units) {
-//            getString(R.string.BMI_HEIGHT_STRING_END_CM)
-//        } else {
-//            getString(R.string.BMI_HEIGHT_STRING_END_IN)
-//        }
-//        val bmiRecord =
-//            BmiRecord(massString, heightString, bmiValue, category, color, dateText)
-//
-//        val records = prefs.getRecordList(KEY_BMI_RESULTS)
-//        if (records.size < 10) {
-//            records.add(bmiRecord)
-//            prefs.save(KEY_BMI_RESULTS, records)
-//        } else {
-//            records.removeAt(0)
-//            records.add(bmiRecord)
-//            prefs.save(KEY_BMI_RESULTS, records)
-//        }
-//    }
 
     private fun showMassError() {
-        massEdit.error = getString(R.string.BMI_MASS_ERROR)
+        massEdit.error = getString(R.string.BMI_MASS_ERORR)
     }
 
     private fun showHeightError() {
